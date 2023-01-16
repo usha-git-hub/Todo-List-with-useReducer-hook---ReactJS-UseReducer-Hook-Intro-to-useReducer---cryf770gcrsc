@@ -1,5 +1,4 @@
 const todoReducer = (state, action) => {
-    switch (action.type) {
   switch (action.type) {
     case "add_todo":
       return [...state, newTodo(action.payload.title)];
@@ -10,10 +9,8 @@ const todoReducer = (state, action) => {
   }
 };
 
-    }
 function newTodo(task) {
   return { id: Date.now(), title: task };
 }
 
-export { todoReducer }
 export { todoReducer };
